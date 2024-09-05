@@ -182,6 +182,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        MongoDB\Laravel\MongoDBServiceProvider::class,
+
+
         /*
          * Package Service Providers...
          */

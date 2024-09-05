@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    // 'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -34,6 +35,12 @@ return [
     */
 
     'connections' => [
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('DB_URI', 'mongodb+srv://admin-nikhil:Nikhil123@cluster0.ito3oey.mongodb.net/test?retryWrites=true&w=majority'),
+            // mongodb+srv://admin-nikhil:<db_password>@cluster0.ito3oey.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+            'database' => 'test',
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',
